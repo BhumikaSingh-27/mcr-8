@@ -11,6 +11,8 @@ const Details = () => {
   const { eventId } = useParams();
   const data = eventData.find((data) => data.id.toString() === eventId);
 
+  const currDate = new Date();
+//   console.log(currDate.getDate());
   return (
     <div className="details-container">
       <div className="info">
@@ -43,14 +45,27 @@ const Details = () => {
             <Speaker data={data} />
           ))}
         </div>
+        {/* <div> */}
+          {/* {data?.eventStartTime> currDate.getDate() && (
+            <button
+              onClick={() => {
+                id.current = data.id;
+                setIsModal(true);
+              }}
+            >
+              RSVP
+            </button>
+          )}
+        </div> */}
+
         <button
-          onClick={() => {
-            id.current = data.id;
-            setIsModal(true);
-          }}
-        >
-          RSVP
-        </button>
+              onClick={() => {
+                id.current = data.id;
+                setIsModal(true);
+              }}
+            >
+              RSVP
+            </button>
       </div>
     </div>
   );

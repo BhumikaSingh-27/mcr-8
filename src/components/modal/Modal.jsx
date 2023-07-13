@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import "./modal.css";
 import { DataContext } from "../../context/DataContext";
 
-const Modal = ({eid}) => {
-    const { setIsModal } = useContext(DataContext);
+const Modal = () => {
+  const { setIsModal, eventData, id } = useContext(DataContext);
+  const data = eventData.find((ele) => ele.id === id.current);
+
   return (
     <div className="modal-container">
       <div className="modal-form">
@@ -13,11 +15,16 @@ const Modal = ({eid}) => {
         <input type="text" />
         <label htmlFor="">Email:</label>
         <input type="text" />
-
-        <span>*You have to make the payment at the venue.</span>
-        <button onClick={()=>{
-            setIsModal(false)
-        }}>RSVP</button>
+        {data?.isPaid && (
+          <span>*You have to make the payment at the venue.</span>
+        )}
+        <button
+          onClick={() => {
+            setIsModal(false);
+          }}
+        >
+          RSVP
+        </button>
       </div>
     </div>
   );
