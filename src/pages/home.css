@@ -1,0 +1,13 @@
+.home-cont {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-a-link {
+    text-decoration: none;
+    color:black
+}

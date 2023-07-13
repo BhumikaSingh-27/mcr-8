@@ -1,0 +1,26 @@
+.sp-container {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px 5px lightgray;
+
+}
+
+.sp-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.event-time {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 5px lightgray;
+    border-radius: 1rem;
+    padding: 1rem;
+}

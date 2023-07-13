@@ -1,0 +1,15 @@
+.nav-header {
+    display: flex;
+    width: 100vw;
+    max-height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* padding:1rem; */
+    border-bottom: 1px solid lightgray;
+    z-index: 5;
+    background-color: white;
+}
