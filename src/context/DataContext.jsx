@@ -10,6 +10,7 @@ export const DataContextProvider = ({ children }) => {
   const [isModal, setIsModal] = useState(false);
   const id = useRef("");
 
+
   return (
     <DataContext.Provider
       value={{
